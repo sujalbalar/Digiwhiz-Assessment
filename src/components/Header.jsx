@@ -27,7 +27,7 @@ function Header() {
             <span className="w-[1px] h-5 border-r-2 border-[#D9D9D9] sm:hidden"></span>
             <li className="sm:hidden cursor-pointer"><img className="h-8 aspect-square" src="/images/magnifyer.svg" alt="search" /></li>
           </ul>
-          {showMobMenu? <p className="cursor-pointer flex items-center xs:visible md:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src="/images/close.svg" alt="close"/> </p> : <p className="cursor-pointer items-center flex sm:visible md:hidden lg:hidden xl:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-6 aspect-square" src="/images/hamb.svg" alt="menu"/> </p>}
+          {showMobMenu? <span className="cursor-pointer flex items-center xs:visible md:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src="/images/close.svg" alt="close"/> </span> : <span className="cursor-pointer items-center flex sm:visible md:hidden lg:hidden xl:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-6 aspect-square" src="/images/hamb.svg" alt="menu"/> </span>}
       </div>
       {
         showMobMenu?
