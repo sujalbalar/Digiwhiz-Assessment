@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Plus from "../images/plus.svg";
-import Link from "../images/link.svg";
 
 function GalleryContainer(){
     const [isClick, setIsClick] = useState(0);
@@ -66,16 +64,16 @@ function Gallery(props){
             imgs[props.index].map((img, index) => {
             return(
               <div key={index} className="group relative overflow-hidden shadow-lg transition-transform duration-300 hover:cursor-pointer">
-                <img className="object-cover aspect-video" key={index} src={img.url} alt={img} />
+                <img className="w-full h-64 object-cover aspect-video" key={index} src={img.url} alt={img} />
                 <div class="absolute bottom-0 left-0 w-full h-20 bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300">
-                  <div class="flex items-center justify-between w-full h-full p-6 px-10">
-                    <div class="flex flex-col gap-2">
+                  <div class="w-full h-full flex items-center justify-between p-6 px-10 sm:py-2">
+                    <div class="flex flex-col gap-2 xs:gap-1">
                       <h3 class="text-white text-xl font-semibold heading-after">{img.title}</h3>
                       <hr class="h-1 w-[35%]"/>
                     </div>
-                    <div class="flex items-center space-x-3 font-semibold text-black">
-                      <button class="bg-accent p-1.5 rounded-full"><img src={Plus} alt="Add" /></button>
-                      <button class="bg-accent p-1.5 rounded-full"><img src={Link} alt="link" /></button>
+                    <div class="flex items-center font-semibold text-black">
+                      <button class="bg-accent p-1.5 rounded-full"><img className="w-6" src="/images/plus.svg" alt="Add" /></button>
+                      <button class="bg-accent p-1.5 rounded-full"><img className="w-6" src="/images/link.svg" alt="link" /></button>
                     </div>
                   </div>
                 </div>

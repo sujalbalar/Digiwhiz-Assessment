@@ -1,9 +1,3 @@
-import logo from "../images/logo.svg";
-import magnifier from "../images/magnifyer.svg";
-import mail from "../images/email.svg";
-import tele from "../images/telephone.svg";
-import Hamb from "../images/hamb.svg";
-import Close from "../images/close.svg";
 import { useState } from "react";
 
 function Header() {
@@ -16,24 +10,24 @@ function Header() {
         <p className="text-[12px] text-[#464646]">Have any questions?</p>
         <div className="flex gap-4 / text-sm sm:gap-6">
           <div className="flex gap-2 items-center">
-            <img src={mail} alt="email"/>
+            <img src="/images/email.svg" alt="email"/>
             <p>contact@mail.com</p>
           </div>
           <span className="w-[1px] h-5 border-r-2 border-[#D9D9D9] sm:hidden"></span>
           <div className="flex gap-2 items-center">
-            <img src={tele} alt="email"/>
+            <img src="/images/telephone.svg" alt="email"/>
             <p className="text-nowrap">+080 0444 333 444</p>
           </div>
         </div>
       </div>
       <div className="bg-[#FFFFFF] py-2 px-64 font-semibold text-[#252C3A] flex justify-between items-center xs:p-2 sm:p-4 md:px-6 lg:px-8">
-          <img className="w-24" src={logo} alt="logo"/> 
+          <img className="w-24" src="/images/logo.svg" alt="logo"/> 
           <ul className="text-lg flex gap-8 items-center xs:hidden sm:hidden md:visible">
             <Links/>
             <span className="w-[1px] h-5 border-r-2 border-[#D9D9D9] sm:hidden"></span>
-            <li className="sm:hidden cursor-pointer"><img className="h-8 aspect-square" src={magnifier} alt="search" /></li>
+            <li className="sm:hidden cursor-pointer"><img className="h-8 aspect-square" src="/images/magnifyer.svg" alt="search" /></li>
           </ul>
-          {showMobMenu? <p className="cursor-pointer flex items-center xs:visible md:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src={Close} alt="close"/> </p> : <p className="cursor-pointer items-center flex sm:visible md:hidden lg:hidden xl:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src={Hamb} alt="menu"/> </p>}
+          {showMobMenu? <p className="cursor-pointer flex items-center xs:visible md:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src="/images/close.svg" alt="close"/> </p> : <p className="cursor-pointer items-center flex sm:visible md:hidden lg:hidden xl:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-6 aspect-square" src="/images/hamb.svg" alt="menu"/> </p>}
       </div>
       {
         showMobMenu?

@@ -1,7 +1,7 @@
 export const slides = [
     {
-        title : "We do  big things with big ideas",
-        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus magna non elementum fermentum.",
+        title : "We do big things with big ideas",
+        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         url : "/images/slide1.jpg"
     },
     {

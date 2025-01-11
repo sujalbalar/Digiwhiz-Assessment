@@ -33,11 +33,11 @@ function SliderLayout() {
         }
         </div>
       </div>
-      <div className="w-full bg-[#FAB702] px-64 py-2 flex items-center justify-between xs:p-2 sm:px-4 md:px-6 lg:px-8">
-        <p className="text-[#FFFFFF] text-md font-bold sm:text-sm">
+      <div className="w-full bg-[#FAB702] px-64 py-2 flex items-center justify-between xs:p-2 xs:gap-3 sm:px-4 md:px-6 lg:px-8">
+        <p className="text-[#FFFFFF] text-md font-bold sm:text-[12px]">
             Consulting And Estimate For Your Project, <span className="text-[#252C3A] text-md font-bold underline sm:text-sm">Contact Us Today</span>
         </p>
-        <button className="bg-[#FFFFFF] py-2 px-6 text-[#252C3A] font-bold sm:text-sm sm:px-2 sm:py-3">Get A Quote</button>
+        <button className="bg-[#FFFFFF] py-2 px-6 text-[#252C3A] font-bold sm:text-[10px] sm:p-3 xs:p-2">Get A Quote</button>
       </div>
     </>
   );
