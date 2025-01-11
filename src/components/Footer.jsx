@@ -1,10 +1,10 @@
 function Footer() {
   return (
-    <div className="text-white p-4 px-36 bg-[#252C3A] flex justify-between px-16 sm:flex-col sm:gap-4 sm:px-6">
-        <p className="text-md font-semibold sm:text-center">© DIGIWHIZ 2019</p>
-        <ul className="flex gap-8 sm:gap-2 sm:text-sm">
+    <div className="text-white p-2 px-64 bg-[#252C3A] flex justify-between xs:flex-col xs:gap-4 xs:px-6 sm:px-6 md:flex-col items-center md:px-8">
+        <p className="text-md font-semibold xs:text-center">© DIGIWHIZ 2019</p>
+        <ul className="flex gap-8 xs:gap-2 xs:text-sm">
             {
-                ["Home", "About us", "Features", "Project", "Pages", "Contact"].map((link, index) => <li className="cursor-pointer hover:text-[#FFB700]">{link}</li>)
+                ["Home", "About us", "Features", "Project", "Pages", "Contact"].map((link, index) => <li key={index} className="cursor-pointer text-sm hover:text-[#FFB700]">{link}</li>)
             }
         </ul>
     </div>

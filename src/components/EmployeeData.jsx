@@ -4,9 +4,9 @@ function EmployeeTable(props){
   return(
     <table className='w-9/12 border-separate border-[#D9D9D9]'>
       <thead>
-        <tr className="bg-[#252C3A] sm:text-[8px]">
+        <tr className="bg-[#252C3A] xs:text-[8px] sm:text-[8px]">
           {
-            objProp.map(prop => <th className="text-white p-4" key={prop}>{prop}</th>)
+            objProp.map(prop => <th className="text-white p-2 font-semibold" key={prop}>{prop}</th>)
           }
         </tr>
       </thead>
@@ -14,17 +14,17 @@ function EmployeeTable(props){
         {
           props.empData.map(emp => {
             return (
-              <tr className={`text-center text-[#252C3A] ${emp.id%2? 'bg-[#F5F5F5]' : 'bg-[#E7E7E7]'} sm:text-[8px]`} key={emp.Code}>
-                <td className="p-3">
+              <tr className={`text-center text-[#252C3A] ${emp.id%2? 'bg-[#F5F5F5]' : 'bg-[#E7E7E7]'} sm:text-[10px] xs:text-[8px]`} key={emp.Code}>
+                <td className="p-1">
                   {emp.Code}
                 </td>
-                <td className="p-3">
+                <td className="p-1">
                   {emp.Name}
                 </td>
-                <td className="p-3">
+                <td className="p-1">
                   {emp.Designation}
                 </td>
-                <td className="p-3">
+                <td className="p-1">
                   {emp['Contact Details']}
                 </td>
                 <td className="text-left p-3">
@@ -94,8 +94,8 @@ function EmployeeData() {
 
   return (
     <div className='w-full p-8 flex flex-col justify-center gap-8'>
-        <p className="text-3xl text-[#252C3A] font-extrabold leading-10 uppercase text-center">Employee Details</p>
-        <div className="flex overflow-x-auto md:justify-center">
+        <p className="text-2xl text-[#252C3A] font-extrabold leading-10 uppercase text-center">Employee Details</p>
+        <div className="flex justify-center overflow-x-auto">
           <EmployeeTable empData = {empData} />
         </div>
     </div>

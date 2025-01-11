@@ -11,51 +11,38 @@ function Header() {
   const [showMobMenu, setShowMobMenu] = useState(false);
 
   return (
-    <div className="w-full sticky top-0">
-      <div className="bg-[#EBEBEB] text-[#464646] flex justify-between py-2 px-36 sm:flex-col sm:hidden">
-        <p className="text-md text-[#464646]">Have any questions?</p>
-        <div className="flex gap-4 sm:flex-col sm:gap-1">
+    <div className="sticky top-0 bg-white z-[9999]">
+      <div className="bg-[#EBEBEB] text-[#464646] flex justify-between px-64 py-2 sm:flex-col sm:p-4 md:px-6 lg:px-8 xs:hidden sm:px-4 xl:visible">
+        <p className="text-[12px] text-[#464646]">Have any questions?</p>
+        <div className="flex gap-4 / text-sm sm:gap-6">
           <div className="flex gap-2 items-center">
             <img src={mail} alt="email"/>
-            <p className="text-sm">contact@mail.com</p>
+            <p>contact@mail.com</p>
           </div>
           <span className="w-[1px] h-5 border-r-2 border-[#D9D9D9] sm:hidden"></span>
           <div className="flex gap-2 items-center">
             <img src={tele} alt="email"/>
-            <p className="text-sm">+080 0444 333 444</p>
+            <p className="text-nowrap">+080 0444 333 444</p>
           </div>
         </div>
       </div>
-      <div className="bg-[#FFFFFF] px-36 py-4 font-semibold text-[#252C3A] flex justify-between sm:p-2">
-          <img className="w-20" src={logo} alt="logo"/>
-          <ul className="text-lg flex gap-8 items-center sm:hidden">
+      <div className="bg-[#FFFFFF] py-2 px-64 font-semibold text-[#252C3A] flex justify-between items-center xs:p-2 sm:p-4 md:px-6 lg:px-8">
+          <img className="w-24" src={logo} alt="logo"/> 
+          <ul className="text-lg flex gap-8 items-center xs:hidden sm:hidden md:visible">
             <Links/>
             <span className="w-[1px] h-5 border-r-2 border-[#D9D9D9] sm:hidden"></span>
-            <li className="sm:hidden cursor-pointer"><img className="h-10 aspect-square" src={magnifier} alt="search" /></li>
+            <li className="sm:hidden cursor-pointer"><img className="h-8 aspect-square" src={magnifier} alt="search" /></li>
           </ul>
-          {showMobMenu? <p className="flex items-center sm:visible md:hidden lg:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src={Close} alt="close"/> </p> : <p className="flex items-center sm:visible md:hidden lg:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src={Hamb} alt="menu"/> </p>}
+          {showMobMenu? <p className="cursor-pointer flex items-center xs:visible md:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src={Close} alt="close"/> </p> : <p className="cursor-pointer items-center flex sm:visible md:hidden lg:hidden xl:hidden" onClick={() => setShowMobMenu(!showMobMenu)}> <img className="w-4 aspect-square" src={Hamb} alt="menu"/> </p>}
       </div>
       {
         showMobMenu?
         <div className="px-2 pt-2 pb-3 space-y-1 sm:visible md:hidden">
-          <li className="block py-2 px-4 rounded text-[#25C3A] hover:bg-[#252C3A] hover:text-white">
-            Home
-          </li>
-          <li className="block py-2 px-4 rounded text-[#25C3A] hover:bg-[#252C3A] hover:text-white">
-            About us
-          </li>
-          <li className="block py-2 px-4 rounded text-[#25C3A] hover:bg-[#252C3A] hover:text-white">
-            Features
-          </li>
-          <li className="block py-2 px-4 rounded text-[#25C3A] hover:bg-[#252C3A] hover:text-white">
-            Project
-          </li>
-          <li className="block py-2 px-4 rounded text-[#25C3A] hover:bg-[#252C3A] hover:text-white">
-            Pages
-          </li>
-          <li className="block py-2 px-4 rounded text-[#25C3A] hover:bg-[#252C3A] hover:text-white">
-            Contact
-          </li>
+          {
+            ["Home","About us","Features","Project","Pages","Contact"].map((link,index) => {
+              return <a className="block py-2 px-4 rounded text-[#25C3A] hover:bg-[#252C3A] hover:text-white" href={link.href}> {link} </a>
+            })
+          }
         </div>:
         null
       }
@@ -80,14 +67,14 @@ function Links(){
 
 function Link(props){
   return(
-    <li className="flex gap-2 items-center">
+    <li className="flex gap-2 items-center text-xl">
       {
         props.isActive ? 
         <div className="grid grid-rows-2 grid-cols-2 gap-[2px]"> 
           <div className="bg-[#FFB700] w-1 h-1"></div> <div className="bg-[#FFB700] w-1 h-1"></div> <div className="bg-[#FFB700] w-1 h-1"></div> <div className="bg-[#FFB700] w-1 h-1"></div>
         </div> : ""
       }
-      <p className={`cursor-pointer ${props.isActive ? 'text-[#FFB700]' : 'text-[#252C3A]'}`} onClick={() => props.updateState(props.num)}>{props.data}</p>
+      <p className={`cursor-pointer text-sm ${props.isActive ? 'text-[#FFB700]' : 'text-[#252C3A]'}`} onClick={() => props.updateState(props.num)}>{props.data}</p>
     </li>
   )
 }
