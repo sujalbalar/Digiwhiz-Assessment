@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <div className="sticky top-0 bg-white z-[9999]">
-      <div className="bg-[#EBEBEB] text-[#464646] flex justify-between px-64 py-2 sm:flex-col sm:p-4 md:px-6 lg:px-8 xs:hidden sm:px-4 xl:visible">
+      <div className="bg-[#EBEBEB] text-[#464646] flex justify-between px-64 py-2 sm:flex-col sm:p-2 md:px-6 lg:px-8 xs:hidden sm:px-4 xl:visible">
         <p className="text-[12px] text-[#464646]">Have any questions?</p>
         <div className="flex gap-4 / text-sm sm:gap-6">
           <div className="flex gap-2 items-center">
@@ -20,7 +20,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="bg-[#FFFFFF] py-2 px-64 font-semibold text-[#252C3A] flex justify-between items-center xs:p-2 sm:p-4 md:px-6 lg:px-8">
+      <div className="bg-[#FFFFFF] py-2 px-64 font-semibold text-[#252C3A] flex justify-between items-center xs:p-2 sm:p-2 md:px-6 lg:px-8">
           <img className="w-24" src="/images/logo.svg" alt="logo"/> 
           <ul className="text-lg flex gap-8 items-center xs:hidden sm:hidden md:visible">
             <Links/>

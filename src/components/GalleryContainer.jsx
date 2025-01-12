@@ -15,7 +15,7 @@ function GalleryContainer(){
           <p className="text-center text-[#5A5A5A]">Lorem ipsum dolor sit amet, sed dicunt oporteat cu, laboramus definiebas cum et. Duo id omnis persequeris neglegentur, facete commodo ea usu, possit lucilius sed ei. Esse efficiendi scripserit eos ex. Sea utamur iisque salutatus id.Mel autem animal.</p>
         </div>
         <div className="flex flex-col gap-10">
-          <div className="flex gap-4 justify-center text-[#5A5A5A] xs:grid xs:grid-cols-3 xs:grid-rows-2 md:grid md:grid-cols-3 md:grid-rows-2 md:place-items-center">
+          <div className="flex gap-4 justify-center text-[#5A5A5A] xs:grid xs:grid-cols-3 sm:grid sm:grid-cols-3 sm:-grid-rows-auto xs:grid-rows-2 md:grid md:grid-cols-3 md:grid-rows-2 md:place-items-center">
             {
               btnTxt.map((txt, index) => {
                 return (
@@ -59,7 +59,7 @@ function Gallery(props){
     ];
 
     return(
-        <div className="sm:flex sm:flex-col grid md:grid-cols-2 md:grid-rows-auto lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-2">
+        <div className="sm:flex sm:flex-col grid md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-2">
         {
             imgs[props.index].map((img, index) => {
             return(
