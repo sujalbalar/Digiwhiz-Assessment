@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ImgContainer from "./ImgContainer"
+import ImgContainer from "./ImgContainer.jsx"
 import Dot from "./Dot.jsx";
 import {slides} from "./SliderData.js";
 
