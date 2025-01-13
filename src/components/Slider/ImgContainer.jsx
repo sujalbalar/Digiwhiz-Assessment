@@ -9,7 +9,7 @@ function ImgContainer(props) {
           <p className="text-4xl text-white font-bold sm:text-2xl sm:w-full">{props.data.title}</p>
           <p className="max-w-full text-xl text-white w-6/12 xs:w-full">{props.data.description}</p>
         </div>
-        <button className="w-fit bg-[#FFB700] font-semibold text-white p-4 xs:p-4">Explore now </button>
+        <button className="w-fit bg-[#FFB700] font-semibold text-white py-3 px-4 xs:p-3 sm:p-4">Explore now </button>
       </div>
     </div>
   )

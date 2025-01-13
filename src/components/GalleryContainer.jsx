@@ -59,7 +59,7 @@ function Gallery(props){
     ];
 
     return(
-        <div className="sm:flex sm:flex-col grid md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-2">
+        <div className="xs:gap-6 sm:flex sm:flex-col sm:gap-6 grid md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-2">
         {
             imgs[props.index].map((img, index) => {
             return(
